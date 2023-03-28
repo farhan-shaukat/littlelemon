@@ -31,10 +31,6 @@ function App() {
     }
   };
 
-  function initializeTimes() {
-    setAvailableTimes({ type: "init" });
-  }
-
   function updateTimes(state, action) {
     if (action.type === "init") {
       return { times: fetchAPI(today) };
