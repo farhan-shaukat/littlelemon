@@ -1,38 +1,583 @@
-.App {
+body {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+}
+.logo img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1050px) {
+  .logo img {
+    width: 75%;
+  }
+}
+
+@media (max-width: 1050px) {
+  .header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+/* NAV START */
+
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+  margin-top: 1em;
+  margin-left: 4em;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navigation li {
+  display: inline-block;
+  margin: 1em;
+  color: #000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+#nav,
+.a {
+  font-family: "Karla", sans-serif;
+  font-weight: 800;
+  color: #000;
+  text-decoration: none;
+  list-style: none;
+}
+
+@media (max-width: 1050px) {
+  .navigation {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+  }
+}
+@media (min-width: 880px) {
+  .navigation {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* NAV END */
+
+/* MAIN START */
+
+.main {
+  display: flex;
+  background-color: #495e57;
+  width: 100%;
+  height: 420px;
+}
+
+@media (max-width: 800px) {
+  .main {
+    justify-content: center;
+    height: auto;
+    text-align: center;
+  }
+}
+
+.main-content {
+  margin-top: 70px;
+}
+
+@media (max-width: 800px) {
+  .main-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 2em;
+  }
+}
+
+.main-content p {
+  font-family: "Karla", sans-serif;
+  font-size: 22px;
+  color: #fff;
+  width: 350px;
+}
+
+@media (max-width: 800px) {
+  .main-content p {
+    text-align: center;
+    width: 95%;
+  }
+}
+
+.featured img {
+  max-width: 100%;
+  height: 420px;
+  border-radius: 15px;
+  margin-top: 2em;
+}
+
+@media (min-width: 700px) and (max-width: 1050) {
+  .featured img {
+    margin-left: -2em;
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .featured img {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .featured {
+    display: none;
+  }
+}
+
+/* MAIN END */
+
+/* HEADERS & BUTTONS START */
+
+h1 {
+  font-family: "Markazi Text", serif;
+  font-size: 60px;
+  font-weight: 700;
+  color: #f4ce14;
+}
+
+h2 {
+  font-family: "Markazi Text", serif;
+  font-size: 30px;
+  color: #fff;
+  margin-top: -1.5em;
+}
+
+.blackColor{
+  color: #000;
+}
+
+h3 {
+  font-family: "Markazi Text", serif;
+  font-size: 60px;
+  color: #000;
+  margin: 1em;
+  margin-right: 5em;
+  margin-left: 0;
+}
+
+@media (max-width: 800px) {
+  h3 {
+    font-size: 60px;
+    margin-top: 1em;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+h4 {
+  font-family: "Markazi Text", serif;
+  font-size: 60px;
+  font-weight: 700;
+  color: #000;
+}
+
+h5 {
+  font-family: "Markazi Text", serif;
+  font-size: 30px;
+  color: #000;
+  margin-top: -2.5em;
+}
+
+#button,
+.btn-app {
+  background-color: #f4ce14;
+  color: #000;
+  font-family: "Karla", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  width: 12em;
+  height: 3em;
+  margin: 1em 0;
+  border-radius: 2em;
+  border: none;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+#button:hover,
+.btn-app:hover {
+  cursor: pointer;
+}
+.specials #button {
+  margin-top: 4em;
+}
+
+@media (max-width: 400px) {
+  .specials #button {
+    margin-top: 1em;
+    margin-bottom: 2em;
+  }
+}
+
+/* HEADER & BUTTONS END */
+
+/* SPECIALS START */
+
+.specials {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  margin-top: 6em;
+}
+
+.specials-head {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: auto;
+}
+
+.card-img-top {
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
+  box-shadow: 5px 10px 20px #ccc;
+}
+
+/* .cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 3em;
+  margin-top: 1em;
+} */
+
+.card-body {
+  font-family: "Karla", sans-serif;
+  padding: 2em !important;
+  line-height: 1.8em;
+  box-shadow: 5px 10px 20px #ccc;
+}
+
+@media (min-width: 700px) {
+  .card-body {
+    height: 300px;
+  }
+}
+
+.card-title {
+  font-family: "Markazi Text", serif;
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.btn.btn-primary {
+  font-family: "Karla", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  border: none;
+}
+
+.title {
+  width: 30%;
+  height: auto;
+  margin-right: 8em;
+}
+
+.title-button {
+  width: 50%;
+  height: auto;
+  margin-top: 10.5em;
+  margin-left: 15em;
+}
+
+/* SPECIALS END */
+
+/* TESTIMONIALS START */
+
+.testimonials {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  background-color: #495e57;
+  text-align: center;
+  padding-top: 1em;
+}
+
+.testimonial-header {
+  font-family: "Markazi Text", serif;
+  font-size: 60px;
+  font-weight: 700;
+  width: 100%;
+  color: #f4ce14;
+}
+
+.review-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+}
+.review {
+  width: 250px;
+  height: 250px;
+  background-color: #fff;
+  margin: 2em;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+.review p {
+  font-family: "Karla", sans-serif;
+}
+
+@media (max-width: 1050px) {
+  .review p {
+    margin: 1em;
+  }
+}
+
+#profile {
+  width: 30%;
+  border-radius: 50%;
+  margin: 1em;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+#rating {
+  width: 50%;
+  display: block;
+  margin: 10px auto;
+}
+
+.review h2 {
+  font-family: "Markazi Text", serif;
+  font-size: 25px;
+  color: #000;
+  text-align: center;
+  margin: 0.1em;
+}
+
+/* TESTIMONIALS END */
+
+/* ABOUT START */
+
+.about {
+  width: 100%;
+  height: auto;
+  padding: 3em 0;
+}
+
+@media (max-width: 800px) {
+  .about {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 800px) {
+  .about-content {
+    width: 100%;
+  }
+}
+
+.about-content p {
+  font-family: "Karla", sans-serif;
+  font-size: 18px;
+  line-height: 1.7em;
+  color: #000;
+  margin-top: -1em;
+}
+
+@media (max-width: 1050px) {
+  .about-content p {
+    font-size: 16px;
+  }
+}
+
+.owners {
+  width: 50%;
+}
+
+@media (max-width: 800px) {
+  .owners {
+    width: 100%;
+    margin: 3em;
+  }
+}
+
+#chefs {
+  width: 50%;
+  height: 60%;
+  margin-top: 1em;
+  margin-left: 10em;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+#restaurant {
+  width: 40%;
+  height: 60%;
+  margin-top: -10em;
+  margin-left: 2em;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ABOUT END */
+
+/* FOOTER START */
+
+.footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  border-top: 10px groove #495e57;
+}
+
+@media (max-width: 800px) {
+  .footer {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+}
+
+.footer img {
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .footer img {
+    width: 50%;
+    margin: 0;
+  }
+}
+
+.one {
+  width: 25%;
+  margin-right: 2em;
+  display: flex;
+}
+
+.two {
+  width: 25%;
+  margin: 1em;
+  margin-top: 2em;
+}
+.three {
+  width: 25%;
+  margin: 1em;
+  margin-top: 2em;
+}
+.four {
+  width: 25%;
+  margin: 1em;
+  margin-top: 2em;
+}
+
+@media (max-width: 800px) {
+  .one,
+  .two,
+  .three,
+  .four {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .one {
+    margin: 10px;
+  }
+}
+
+/* footer END */
+
+.booking-confirmed h2 {
+  color: #495e57;
+}
+.booking-form,
+.booking-confirmed {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+.booking-wrapper {
+  /* width: 40%; */
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.booking button {
+  cursor: pointer;
+  padding: 1.5em 2em;
+  background: #f4ce14;
+  color: #495e57;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+}
+.booking-wrapper form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.App-link {
-  color: #61dafb;
+.booking-wrapper input,
+.booking-wrapper select {
+  flex-basis: 100%;
+  max-width: 100%;
+  width: 400px;
+  border: 1px solid #6cbea3;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.booking button:disabled {
+  cursor: default;
+  padding: 1.5em 2em;
+  background: gray;
+}
+
+.booking {
+  display: grid;
+  gap: 20px;
+}
+.booking input {
+  padding: 1em;
+  font-size: 1rem;
+  border-radius: 4px;
+  box-shadow: none;
+}
+
+.error {
+  color: rgb(154, 36, 36);
+}
+
+.menuImg {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 550px) {
+  .booking-wrapper input,
+  .booking-wrapper select {
+    width: 300px;
   }
 }
